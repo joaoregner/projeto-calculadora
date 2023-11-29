@@ -1,0 +1,142 @@
+/* Zera as margens e preenchimentos padrão, e define a modelagem da caixa como border-box */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+/* Estiliza o corpo da página */
+body {
+  min-height: 100vh;
+  background-color: hsl(236, 69%, 11%);
+  display: grid;
+  place-items: center;
+  overflow-y: hidden;
+}
+body.light-theme {
+  background-color: #96d9d6;
+  color: #901616;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  width: 100%;
+  position: relative;
+}
+
+header .logo {
+  width: 30px;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+}
+
+header .imagem-botao {
+  width: 30px;
+  transition: 0.2s ease-in-out;
+  position: absolute;
+}
+
+header #botao-alterar-tema {
+  background: none;
+  border: none;
+  padding-right: 45px;
+}
+
+header .logo:hover,
+header .imagem-botao:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+/* Estiliza a calculadora para o tema escuro */
+.calculator {
+  background-color: #15173c;
+  color: white;
+  width: 350px;
+  max-width: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  position: relative;
+}
+
+/* Estiliza a tela da calculadora para o tema escuro */
+.calculator .screen {
+  grid-column: 1 / -1;
+  background-color: #090c31;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: right;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+/* Estiliza os botões da calculadora para o tema escuro */
+.calculator .btn {
+  background-color: #15173c;
+  color: white;
+  border: 0;
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* Efeito hover nos botões para o tema escuro */
+.calculator .btn:hover {
+  background-color: #090c31;
+}
+
+/* Estiliza o botão de igual para o tema escuro */
+.calculator #equals {
+  grid-row: span 2;
+  background-color: #e6394a;
+}
+
+/* Efeito hover no botão de igual para o tema escuro */
+.calculator #equals:hover {
+  background-color: #e65766;
+}
+
+/* Estiliza o botão de alternar tema para o tema escuro */
+.theme-toggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+}
+
+/* Estiliza a calculadora para o tema claro */
+.calculator.light-theme {
+  background-color: #212121;
+}
+
+/* Estiliza a tela da calculadora para o tema claro */
+.calculator.light-theme .screen {
+  background-color: #230909;
+  color: #000000;
+}
+
+/* Estiliza os botões da calculadora para o tema claro */
+.calculator.light-theme .btn {
+  background-color: #a8a8a8; /* Coral Pearl */
+  color: #000000;
+}
+/* Estiliza o botão de igual para o tema claro */
+.calculator.light-theme #equals {
+  background-color: #ff3b36;
+}
+
+/* Efeito hover no botão de igual para o tema claro */
+.calculator.light-theme #equals:hover {
+  transition: 0.1s;
+  background-color: #ff5b57;
+}
